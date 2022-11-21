@@ -4,34 +4,32 @@ export const Layout = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  padding: 2px;
-
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    border-radius: 5px;
-    max-width: 80%;
-  }
+  flex-direction: column;
 
   img {
     max-width: 100%;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px 5px 0 0;
-    background-size: cover;
+    height: 800px;
   }
 
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  .content {
+    max-width: 90%;
+    padding: 45px;
   }
 
-  .container {
-    padding: 1rem 0;
+  .content h2 {
+    font-size: 40px;
   }
 
-  h2,
-  p {
-    margin: 1rem 0;
+  .content p {
+    margin-top: 30px;
+  }
+
+  .content p:nth-child(2) {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .content p:nth-child(3) {
+    line-height: 25px;
   }
 `;

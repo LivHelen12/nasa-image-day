@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
-import { nasaEndpoint, nasaApiKey } from "../../config/config.js";
 import { Layout } from "./style.js";
 
 const Apod = () => {
   const [data, setData] = useState({});
 
   useEffect(() => {
-    fetch(`${nasaEndpoint}/planetary/apod?api_key=${nasaApiKey}`)
+    fetch(
+      `${process.env.REACT_APP_NASA_ENDPOINT}/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -18,11 +19,15 @@ const Apod = () => {
 
   return (
     <Layout>
-      <div className="card">
-        <img src={data.hdurl} alt={data.title} />
-        <div className="container">
+      <div className="container">
+        <img
+          src={data.hdurl}
+          alt={data.title}
+          style={{ width: "100%", heigth: "200px" }}
+        />
+        <div className="content">
           <h2>{data.title}</h2>
-          <p>{data.copyright}</p>
+          <p>By {data.copyright}</p>
           <p>{data.explanation}</p>
         </div>
       </div>
