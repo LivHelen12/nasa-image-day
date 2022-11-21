@@ -16,7 +16,7 @@
 
 ![Image of the day](./src/image/screenshot.png)
 
-# How to use the project you need:
+# To run the project:
 
 1. Clone this project
 2. Open the project
