@@ -12,6 +12,10 @@
 - [x] Get the informations from NASA's open API.
 - [x] Shows the image of the day selected by NASA along with information about the photo
 
+# Final result
+
+![Image of the day](./src/image/screenshot.png)
+
 # How to use the project you need:
 
 1. Clone this project
