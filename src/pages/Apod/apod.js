@@ -6,7 +6,7 @@ const Apod = () => {
   const [data, setData] = useState({});
 
   useEffect(() => {
-    fetch(`https://${nasaEndpoint}/planetary/apod?api_key=${nasaApiKey}`)
+    fetch(`${nasaEndpoint}/planetary/apod?api_key=${nasaApiKey}`)
       .then((res) => res.json())
       .then((data) => {
         setData(data);
